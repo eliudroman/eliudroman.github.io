@@ -1,0 +1,61 @@
+
+
+body {
+    color: #f2f2f2;
+    /* Utilizamos background-image para establecer la imagen de fondo */
+    background-image: url("img/blackboard.jpg");
+    /* Ajustamos el tamaño de la imagen de fondo para cubrir todo el fondo del cuerpo */
+    background-size: cover;
+    /* Centramos la imagen de fondo en el cuerpo */
+    background-position: center;
+    /* Fijamos la imagen de fondo para que no se desplace con el contenido */
+    background-attachment: fixed;
+    /* Añadimos un color de fondo de respaldo en caso de que la imagen no se cargue o sea transparente */
+    background-color: #f2f2f2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+
+  body::before {
+    content: "";
+    /* Ajustamos el tamaño de la pseudo-clase ::before para cubrir todo el fondo del cuerpo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Aplicamos un color de fondo oscuro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.727); /* Puedes ajustar el valor del canal alfa (0 a 1) para controlar la intensidad del efecto */
+    z-index: -1; /* Asegura que el contenido se superponga sobre esta capa */
+  }
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+a {
+    color: rgb(138, 108, 138);
+    /* Cambia el color del enlace no visitado */
+    text-decoration: none;
+    /* Elimina el subrayado predeterminado */
+}
+
+/* Estilos para el enlace visitado */
+a:visited {
+    color: rgb(138, 108, 138);
+    /* Cambia el color del enlace visitado */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    /* Hace que los elementos estén uno debajo del otro */
+    align-items: center;
+    /* Centra horizontalmente los elementos */
+    justify-content: center;
+    /* Centra verticalmente los elementos */
+    height: 100vh;
+}
