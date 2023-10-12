@@ -1,37 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE HTML>
+<html lang="en" style="background-color: #4251b1; background-image: url(intro.svg); background-size: 100% 100%; background-attachment: fixed;">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="TER.css">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Juego de una gemela</title>
+<script src='lib/quintus.js'></script>
+<script src='lib/quintus_sprites.js'></script>
+<script src='lib/quintus_scenes.js'></script>
+<script src='lib/quintus_2d.js'></script>
+<script src='lib/quintus_input.js'></script>
+<script src='lib/quintus_ui.js'></script>
+<script src='lib/quintus_touch.js'></script>
+<script src='lib/quintus_anim.js'></script>
+<script src='lib/quintus_tmx.js'></script>
+<script src='lib/quintus_audio.js'></script>
+
+<style>
+  canvas { background-image: url(images/mainTitle.png); background-size: 100% 100%;}
+</style>
+
+<script src='mario.js'></script>
 </head>
 
 <body>
-    <section>
-        <div class="menu">
-            <h1>Tres en Raya</h1>
-            <h2><a href="JvsJ.html" onclick="playSound(event)">Jugador vs Jugador</a></h2>
-            <h2><a href="#" onclick="playSound(event)">Jugador vs IA</a></h2>
-
-            <audio id="audio" src="pop.mp3"></audio>
-            <script>
-                function playSound(event) {
-                    event.preventDefault(); // Evita la redirección del enlace
-                    var audio = document.getElementById("audio");
-                    audio.play();
-                    // Agrega un retraso de 1 segundo antes de redirigir
-                    setTimeout(function () {
-                        var url = event.target.getAttribute("href");
-                        if (url) {
-                            window.location.href = url;
-                        }
-                    }, 400);
-                }
-            </script>
-        </div>
-    </section>
+  <script type="text/javascript">
+    window.onload = game;
+  </script>
 </body>
-
 </html>
