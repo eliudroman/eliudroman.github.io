@@ -118,6 +118,15 @@ Q.scene("level1",function(stage) {
 
   stage.insert(new Q.Block({ x: 500, y: 40, h: 50, w: 50 }));
 
+  for (var i = 0; i < 1000; i++) {
+    stage.insert(new Q.Block({
+      x: i * 50,  // Ajusta la posición x según la separación que desees
+      y: 0,       // Ajusta la posición y según la altura de la plataforma
+      h: 30,      // Altura de la plataforma
+      w: 40       // Ancho de cada bloque en la plataforma
+    }));
+  }
+
   // Give the stage a moveable viewport and tell it
   // to follow the player.
   stage.add("viewport").follow(player);
