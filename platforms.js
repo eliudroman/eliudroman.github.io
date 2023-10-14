@@ -53,6 +53,13 @@ Q.Sprite.extend("Player",{
     }
 
     if(this.p.vy > 600) { this.p.vy = 600; }
+
+    // Cambia el frame del jugador según la dirección
+    if (this.p.direction === "left") {
+      this.p.frame = 1;  // Frame de la dirección izquierda
+    } else {
+      this.p.frame = 0;  // Frame de la dirección derecha
+    }
     
   }
 
